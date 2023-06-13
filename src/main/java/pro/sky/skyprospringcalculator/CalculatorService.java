@@ -9,7 +9,10 @@ public class CalculatorService {
 
     }
 
-    public int divide(int num1, int num2) {
+    public int divide(int num1, int num2) throws IllegalArgumentException {
+        if (num2 == 0) {
+            throw new IllegalArgumentException();
+        }
         return num1 / num2;
     }
 
